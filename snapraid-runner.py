@@ -69,15 +69,8 @@ def send_notification(success):
     logging.info("sending msg")
     # Create an Apprise instance
     apobj = apprise.Apprise()
-
-    # Create an Config instance
-    apprise_config = apprise.AppriseConfig()
-
-    apprise_config_file = config["notification"]["config"]
-    # Add a configuration source:
-    apprise_config.add(apprise_config_file)
-    # Make sure to add our config into our apprise object
-    apobj.add(apprise_config)
+    # add url to object
+    apobj.add(config["notification"]["url"])
 
     if success:
         message_title = "SnapRAID job completed successfully:\n\n\n"

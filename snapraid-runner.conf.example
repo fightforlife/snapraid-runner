@@ -23,12 +23,9 @@ sendon = success,error
 ; set to false to get full programm output
 short = true
 
-; Python Apprise config.
-; https://github.com/caronc/apprise/wiki/config_yaml
-config = apprise.yml
+; Python Apprise url.
+url = mailto://myemail:mypass@gmail.com
 
-; maximum email size in KiB
-maxsize = 500
 
 [scrub]
 ; set to true to run scrub after sync
